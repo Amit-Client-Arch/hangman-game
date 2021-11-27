@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.alphabet {
+  @include clear;
+  margin: 15px auto;
+  padding: 0;
+  max-width: 900px;
+
+  .alphabet__letter {
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 35px;
+    height: 30px;
+    padding-top: 10px;
+    background: $white;
+    color: $base-color;
+    cursor: pointer;
+    @include corners(5px);
+    border: solid 1px $white;
+  
+    &:hover {
+      background: $base-color;
+      border: solid 1px $white;
+      color: $white;
+    }
+  }
+}
+
+
+
+.my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+
+  li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.6em;
+  }
+}
+
+
+
+.active {
+  @include opacity;
+  cursor: default;
+
+  &:hover {
+    @include fade;
+    @include opacity;
+  }
+}
+
+#mylives {
+  font-size: 1.6em;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .alphabet {
+    padding: 0 0 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alphabet {
+    padding: 0 0 0 25px;
+  }
+}
